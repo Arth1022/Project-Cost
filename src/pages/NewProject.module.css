@@ -1,0 +1,41 @@
+.newProject {
+    padding: 4em 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    min-height: 60vh;
+}
+
+.newProject h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+}
+
+.newProject p {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 0;
+    color: #888;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .newProject {
+        padding: 2em 1em;
+        min-height: auto;
+    }
+
+    .newProject h1 {
+        font-size: 1.8em;
+    }
+
+    .newProject p {
+        font-size: 1em;
+    }
+}

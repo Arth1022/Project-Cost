@@ -39,7 +39,8 @@
     margin-top: 1em;
 }
 
-.actions button {
+.actions button,
+.actions a {
     display: inline-flex;
     align-items: center;
     gap: 0.4em;
@@ -54,11 +55,17 @@
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.actions button:hover {
+.actions a {
+    text-decoration: none;
+}
+
+.actions button:hover,
+.actions a:hover {
     background-color: #000;
     color: #fff;
 }
 
-.actions button:active {
+.actions button:active,
+.actions a:active {
     transform: scale(0.98);
 }

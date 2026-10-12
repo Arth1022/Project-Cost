@@ -1,24 +1,19 @@
 import { useLocation } from "react-router-dom";
-import Message from "../components/message/Message";
+import Message from "../components/ui/Message";
 import styles from './Projects.module.css'
-import Container from "../components/Container";
-import Loading from "../components/Loading";
-import LinkButton from "../components/LinkButton";
+import Container from "../components/layout/Container";
+import Loading from "../components/ui/Loading";
+import LinkButton from "../components/ui/LinkButton";
 import ProjectCard from "../components/project/ProjectCard";
 
 import { useState, useEffect } from "react";
 
 
-type ProjectData = {
-  id: string;
-  name: string;
-  budget: number | string;
-  category?: { id: string; name: string };
-};
+import type { Project } from "../types/project";
 
-function Project() {
+const Projects = () => {
 
-  const [projects, setProjects] = useState<ProjectData[]>([]);
+  const [projects, setProjects] = useState<Project[]>([]);
   const [removeLoading, setRemoveLoading] = useState(false);
   const [projectsMessage, setProjectsMessage] = useState("")
 
@@ -80,4 +75,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default Projects;

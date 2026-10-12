@@ -2,23 +2,24 @@ import { useNavigate } from 'react-router-dom'
 
 import ProjectForm from '../components/project/ProjectForm'
 import styles from './NewProject.module.css'
+import type { Project } from '../types/project'
 
 
 const NewProject = () => {
 
   const navigate = useNavigate()
 
-  const createPost = (project: any) => {
-    // Implementation for creating a new project
-    project.cost = 0,
-    project.services = []
-  
+  const createPost = (formProject: Project) => {
+    // sem id: o json-server gera um id aleatório automaticamente
+    const { id: _id, ...project } = formProject
+    const newProject = { ...project, cost: 0, services: [] }
+
     fetch('http://localhost:5000/projects', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(project)
+      body: JSON.stringify(newProject)
     }).then(
       (resp) => resp.json()
     )

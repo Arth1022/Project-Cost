@@ -1,11 +1,13 @@
+import { Link } from 'react-router';
 import Style from './ProjectCard.module.css';
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs';
+import type { Project } from '../../types/project';
 
 type ProjectCardProps = {
     // Define any props for the ProjectCard component here
-    id: string;
-    name: string;
-    budget: number | string;
+    id: Project['id'];
+    name: Project['name'];
+    budget: Project['budget'];
     category: string;
     handleRemove?: (id: string) => void;
 };
@@ -22,9 +24,9 @@ const ProjectCard = (props : ProjectCardProps) => {
                 <span>Categoria:</span> {props.category}
             </p>
             <div className={Style.actions}>
-                <button type="button">
+                <Link to={`/project/${props.id}`}>
                     <BsPencil /> Editar
-                </button>
+                </Link>
                 <button type="button" onClick={() => props.handleRemove?.(props.id)}>
                     <BsFillTrashFill /> Remover
                 </button>

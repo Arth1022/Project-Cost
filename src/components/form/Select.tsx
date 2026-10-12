@@ -1,10 +1,11 @@
 import type { ChangeEvent } from 'react'
 import styles from './Select.module.css'
+import type { Category } from '../../types/project'
 
 type SelectProps = {
     text?: string
     name?: string
-    options?: any[]
+    options?: Category[]
     handleOnChange?: (e: ChangeEvent<HTMLSelectElement>) => void
     value?: string | number
 }
@@ -17,7 +18,7 @@ const Select = ({  text, name, handleOnChange, value, options = [] }: SelectProp
                 <option>
                     Selecione uma opcao
                 </option>
-                {options.map((option: any) => (
+                {options.map((option) => (
                     <option key={option.id} value={option.id}>
                         {option.name}
                         </option>

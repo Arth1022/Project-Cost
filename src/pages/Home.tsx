@@ -1,5 +1,5 @@
 import styles from './Home.module.css'
-import LinkButton from '../components/LinkButton'
+import LinkButton from '../components/ui/LinkButton'
 
 const Home = () => {
   return (

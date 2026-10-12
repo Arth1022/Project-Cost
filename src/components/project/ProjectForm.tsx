@@ -3,26 +3,18 @@ import type { ChangeEvent, FormEvent } from 'react'
 import Input from '../form/Input'
 import Select from '../form/Select'
 import styles from './ProjectForm.module.css'
-
-type Category = {
-  id: number | string
-  name: string
-}
-
-type Project = {
-  name: string
-  budget: number
-  category?: Category
-}
+import type { Category, Project } from '../../types/project'
 
 type ProjectFormProps = {
+  btntext?: string
   handleSubmit: (project: Project) => void
   projectData?: Project
 }
 
-const emptyProject: Project = { name: '', budget: 0 }
+const emptyProject: Project = { id: '', name: '', budget: 0, cost: 0 }
 
-const ProjectForm = ({ handleSubmit, projectData }: ProjectFormProps) => {
+const ProjectForm = ({ handleSubmit, btntext, projectData }: ProjectFormProps) => {
+
   const [categories, setCategories] = useState<Category[]>([])
   const [project, setProject] = useState<Project>(projectData || emptyProject)
 
@@ -43,7 +35,7 @@ const ProjectForm = ({ handleSubmit, projectData }: ProjectFormProps) => {
   }
 
   const handleCategory = (e: ChangeEvent<HTMLSelectElement>) => {
-    const category = categories.find((c) => String(c.id) === e.target.value)
+    const category = categories.find((c) => c.id === e.target.value)
     setProject({ ...project, category })
   }
 
@@ -73,7 +65,7 @@ const ProjectForm = ({ handleSubmit, projectData }: ProjectFormProps) => {
         value={project.category?.id ?? ''}
       />
       <div>
-        <input type="submit" value="Criar projeto" className={styles.submitButton} />
+        <input type="submit" value={btntext || "Criar projeto"} className={styles.submitButton} />
       </div>
     </form>
   )

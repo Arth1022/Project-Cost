@@ -7,4 +7,9 @@
 html, body, #root {
   background-color: #f0f2f5;
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
 }

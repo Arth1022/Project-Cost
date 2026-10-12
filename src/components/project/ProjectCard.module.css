@@ -1,0 +1,64 @@
+.card {
+    width: calc(25% - 1.5em);
+    min-width: 16em;
+    margin: 0 1.5em 1.5em 0;
+    padding: 1.25em;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 0.25em;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.card h4 {
+    background-color: #000;
+    color: #fff;
+    margin: -1.25em -1.25em 1em -1.25em;
+    padding: 0.75em 1.25em;
+    border-radius: 0.25em 0.25em 0 0;
+    font-size: 1.1em;
+}
+
+.card p {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.card p span {
+    font-weight: 700;
+    color: #000;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.actions button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    background-color: #fff;
+    color: #000;
+    padding: 0.5em 1em;
+    border: 2px solid #000;
+    border-radius: 0.25em;
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.actions button:active {
+    transform: scale(0.98);
+}

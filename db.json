@@ -1,28 +1,5 @@
 {
-  "projects": [
-    {
-      "name": "ERP",
-      "budget": "5000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "XYq-jWf4Cqc"
-    },
-    {
-      "name": "Field",
-      "budget": "12000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": "3hsj83GZT_E"
-    }
-  ],
+  "projects": [],
   "categories": [
     {
       "id": "1",

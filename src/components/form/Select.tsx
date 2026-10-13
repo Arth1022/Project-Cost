@@ -16,7 +16,7 @@ const Select = ({  text, name, handleOnChange, value, options = [] }: SelectProp
             <label htmlFor={name}>{text}:</label>
             <select name={name} id={name} onChange={handleOnChange} value={value}>
                 <option>
-                    Selecione uma opcao
+                    Selecione uma opção
                 </option>
                 {options.map((option) => (
                     <option key={option.id} value={option.id}>

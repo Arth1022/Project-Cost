@@ -53,7 +53,7 @@ const ProjectForm = ({ handleSubmit, btntext, projectData }: ProjectFormProps) =
         type="number"
         text="Orçamento do projeto"
         name="budget"
-        placeholder="Insira o orçamento total"
+        placeholder="Orçamento total"
         handleOnChange={handleChange}
         value={project.budget || ''}
       />

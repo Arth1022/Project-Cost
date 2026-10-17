@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { ChangeEvent, FormEvent } from 'react'
 import Input from '../form/Input'
 import Select from '../form/Select'
+import SubmitButton from '../form/SubmitButton'
 import styles from './ProjectForm.module.css'
 import type { Category, Project } from '../../types/project'
 
@@ -64,9 +65,7 @@ const ProjectForm = ({ handleSubmit, btntext, projectData }: ProjectFormProps) =
         handleOnChange={handleCategory}
         value={project.category?.id ?? ''}
       />
-      <div>
-        <input type="submit" value={btntext || "Criar projeto"} className={styles.submitButton} />
-      </div>
+      <SubmitButton text={btntext || 'Criar projeto'} />
     </form>
   )
 }

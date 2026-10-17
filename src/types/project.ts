@@ -6,8 +6,15 @@ export interface Category {
 export interface Project {
   id: string
   name: string
-  budget: number 
+  budget: number
   category?: Category
   cost: number
-  services?: unknown[]
+  services?: Services[]
+}
+
+export interface Services {
+  id?: string,
+  name: string,
+  cost: number,
+  description: string
 }

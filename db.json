@@ -7,8 +7,21 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 444,
+      "services": [
+        {
+          "name": "teste",
+          "cost": "222",
+          "description": "sdasd",
+          "id": "729d3f00-2ce4-414e-b62f-8e67d348319e"
+        },
+        {
+          "name": "teste",
+          "cost": "222",
+          "description": "sdasd",
+          "id": "49458e2a-01de-482d-be5f-009ccf11c94c"
+        }
+      ],
       "id": "P4-VEwcaX_Q"
     },
     {
@@ -32,6 +45,17 @@
       },
       "services": [],
       "id": "9hUNPEt6TZA"
+    },
+    {
+      "name": "teste",
+      "budget": "2222",
+      "cost": 0,
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "services": [],
+      "id": "Dt5-QLQLDAM"
     }
   ],
   "categories": [

@@ -11,6 +11,10 @@ type ServiceProps = {
 }
 
 const ServiceCard = (props: ServiceProps) =>{
+    const remove = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault()
+        props.handleRemove?.(props.id, props.cost)
+    }
     return(
         <div className={styles.card}>
             <h4>{props.name}</h4>
@@ -19,7 +23,7 @@ const ServiceCard = (props: ServiceProps) =>{
             </p>
             <p>{props.description}</p>
             <div className={styles.actions}>
-                <button type="button" onClick={() => props.handleRemove?.(props.id, props.cost)}>
+                <button type="button" onClick={remove}>
                     <BsFillTrashFill /> Remover
                 </button>
             </div>

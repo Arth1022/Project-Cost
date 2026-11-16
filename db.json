@@ -1,5 +1,22 @@
 {
-  "projects": [
+  "projects": [],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Devs"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Marketing"
+    }
   ],
   "$schema": "./node_modules/json-server/schema.json"
 }

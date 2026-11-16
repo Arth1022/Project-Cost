@@ -32,7 +32,10 @@ const ProjectForm = ({ handleSubmit, btntext, projectData }: ProjectFormProps) =
   }
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setProject({ ...project, [e.target.name]: e.target.value })
+    const { name, value, type } = e.target
+    // inputs number devolvem string; converte para salvar como número
+    const parsed = type === 'number' ? (value === '' ? 0 : Number(value)) : value
+    setProject({ ...project, [name]: parsed })
   }
 
   const handleCategory = (e: ChangeEvent<HTMLSelectElement>) => {
